@@ -23,3 +23,31 @@ for d in data:
 print(f'一共有 {len(new)} 筆留言長度小於 100')
 print(new[0])
 print(new[1])
+
+"""
+good = []
+for d in data:
+    if 'good' in d:
+        good.append(d)
+print(f'一共有 {len(good)} 筆留言提到good')
+print(good[0])
+"""
+
+# 清單快寫法 : List Comprehension 
+good = [d for d in data if 'good' in d]
+print(f'一共有 {len(good)} 筆留言提到good')
+print(good[0])
+
+
+# 清單快寫法 : List Comprehension 
+good = [1 for d in data if 'good' in d]
+print(f'一共有 {len(good)} 筆留言提到good')
+print(good)
+
+bad = ['bad' in d for d in data]
+print(bad)
+
+bad = []
+for d in data:
+    bad.appen('bad' in d)
+    
